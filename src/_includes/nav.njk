@@ -1,0 +1,27 @@
+<nav class="bg-gray-900 text-white">
+  <ul class="flex space-x-6 px-6 py-4">
+    {% for item in menu %}
+      <li class="group relative">
+        <a href="{{ item.url }}" class="hover:text-yellow-400">{{ item.label }}</a>
+        {% if item.children %}
+          <ul class="absolute left-0 mt-2 hidden group-hover:block bg-gray-800 shadow-lg rounded-md z-10 min-w-max">
+            {% for child in item.children %}
+              <li class="group relative">
+                <a href="{{ child.url }}" class="block px-4 py-2 hover:bg-gray-700">{{ child.label }}</a>
+                {% if child.children %}
+                  <ul class="absolute top-0 left-full mt-0 ml-2 hidden group-hover:block bg-gray-700 shadow-lg rounded-md min-w-max">
+                    {% for grandchild in child.children %}
+                      <li>
+                        <a href="{{ grandchild.url }}" class="block px-4 py-2 hover:bg-gray-600">{{ grandchild.label }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
