@@ -9,7 +9,7 @@
               <li class="group relative">
                 <a href="{{ child.url }}" class="block px-4 py-2 hover:bg-gray-700">{{ child.label }}</a>
                 {% if child.children %}
-                  <ul class="absolute top-0 left-full mt-0 ml-2 hidden group-hover:block bg-gray-700 shadow-lg rounded-md min-w-max">
+                  <ul class="absolute top-0 left-full mt-0 ml-2 hidden group-hover:block bg-gray-700 shadow-lg rounded-md z-10 min-w-max">
                     {% for grandchild in child.children %}
                       <li>
                         <a href="{{ grandchild.url }}" class="block px-4 py-2 hover:bg-gray-600">{{ grandchild.label }}</a>

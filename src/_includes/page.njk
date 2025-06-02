@@ -11,8 +11,10 @@ title: ProtoType #1
     <title>{{ title }}</title>
   </head>
   <body>
-    {% include "nav.njk" %}
-    
+    {% include "dropdown_hover.njk" %}
+
     {{ content | safe }}
+
+    <script src="/scripts/flowbite.min.js"></script>
   </body>
 </html>

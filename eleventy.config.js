@@ -6,4 +6,5 @@ export const config = {
 
 export default function(eleventyConfig) {
 	eleventyConfig.addLayoutAlias("page", "page.njk");
+  eleventyConfig.addPassthroughCopy({ "./node_modules/flowbite/dist/flowbite.min.js": "scripts/flowbite.min.js" });
 };
