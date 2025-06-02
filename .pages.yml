@@ -7,6 +7,6 @@ media:
   - name: images # Note: 'name' key is required here
     label: Images
     input: src/media/images
-    output: /images
+    output: /media/images
     categories: [ image ]
 
