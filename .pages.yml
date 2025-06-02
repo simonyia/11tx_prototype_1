@@ -1,12 +1,4 @@
 media:
- - name: videos
-    label: Videos
-    input: src/media/videos
-    output: /media/videos
-    categories: [ video ]
-  - name: images # Note: 'name' key is required here
-    label: Images
-    input: src/media/images
-    output: /media/images
-    categories: [ image ]
+    input: src/media
+    output: /media
 
